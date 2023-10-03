@@ -1,0 +1,22 @@
+# FOR TMA QUESTION 1
+# EXAMPLE FOR UBUNTU DOCKER
+# Using an Ubuntu-based image as the base
+FROM ubuntu:20.04
+
+# Installing system dependencies using apt
+RUN apt-get update && apt-get install -y python3 python3-pip
+
+# Creating a directory for the application
+WORKDIR /app
+
+# Copying the "Example_for_TMA.py Python web app code into the container
+COPY . /app
+
+# Installing Python dependencies using pip
+RUN pip3 install -r requirements.txt
+
+# Exposing the application's port
+EXPOSE 80
+
+# Starting the Python web application
+CMD ["python3", "Example_for_TMA.py"]

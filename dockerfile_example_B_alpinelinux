@@ -1,0 +1,22 @@
+# FOR TMA QUESTION 1
+# EXAMPLE FOR ALPINE LINUX DOCKER
+# Using an Alpine Linux-based image as the base
+FROM alpine:3.14
+
+# Installing system dependencies using apk
+RUN apk update && apk add python3 py3-pip
+
+# Creating a directory for the application
+WORKDIR /app
+
+# Copying the "Example_for_TMA.py Python web app code into the container
+COPY . /app
+
+# Installing Python dependencies using pip
+RUN pip3 install -r requirements.txt
+
+# Exposing the application's port
+EXPOSE 80
+
+# Starting the Python web application
+CMD ["python3", "Example_for_TMA.py"]
