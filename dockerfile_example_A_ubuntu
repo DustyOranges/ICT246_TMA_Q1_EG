@@ -1,4 +1,3 @@
-# FOR TMA QUESTION 1
 # EXAMPLE FOR UBUNTU DOCKER
 # Using an Ubuntu-based image as the base
 FROM ubuntu:20.04

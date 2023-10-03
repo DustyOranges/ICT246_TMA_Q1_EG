@@ -1,4 +1,3 @@
-# FOR TMA QUESTION 1
 # EXAMPLE FOR ALPINE LINUX DOCKER
 # Using an Alpine Linux-based image as the base
 FROM alpine:3.14
